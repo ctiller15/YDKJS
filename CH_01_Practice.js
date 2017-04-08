@@ -1,19 +1,24 @@
+// declaring constants.
 const ACCESSORY_PRICE = 9.99;
 const SALES_TAX = 0.08;
 const amount = 99.99;
 
+//Starting bank balance and starting total.
 var bank_balance = 322.13;
 var total = 0;
 
+//subtracts from the bank balance and adds to the running total.
 function change(cost){
 	bank_balance = bank_balance - cost;
 	total = total + cost;
 }
 
+//Calculates sales tax.
 function tax(val){
 	return val * SALES_TAX;
 }
 
+//Displays the entire total.
 function display(tot){
 	console.log( "$" + tot.toFixed( 2 ) );
 }
